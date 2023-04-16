@@ -10,7 +10,7 @@
             <form action='prediction' method="GET" class="w-full max-w-lg">
                 <x-button class="bg-gray-100 text-gray-900">{{ __('Prediction') }}</x-button>
             </form>
-            <form action="{{ route('propose_index') }}" method="GET" class="w-full max-w-lg">
+            <form href="" method="GET" class="w-full max-w-lg">
                 <x-button class="bg-gray-100 text-gray-900">{{ __('propose') }}</x-button>
             </form>
         </h2>

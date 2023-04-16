@@ -7,15 +7,18 @@ use App\Models\Book; //Add
 use App\Http\Controllers\ProposeController; //Add
 use App\Models\Propose; //Add
 
+Route::get('/employee', 'App\Http\Controllers\EmployeeController@csvEmployee');
 
 Route::get('/dataViz', 'App\Http\Controllers\DataVizController@csvDataViz');
-Route::get('/employee', 'App\Http\Controllers\EmployeeController@csvEmployee');
 Route::get('/prediction', 'App\Http\Controllers\PredictionController@csvPrediction');
 
+Route::get('/', function () {
+    return view('menu');
+})->middleware(['auth'])->name('menu');
 
 //企画：ダッシュボード表示(proposes.blade.php)
-Route::get('/', [ProposeController::class,'index'])->middleware(['auth'])->name('propose_index');
 Route::get('/dashboard', [ProposeController::class,'index'])->middleware(['auth'])->name('dashboard');
+Route::get('/proposes', [ProposeController::class,'index'])->middleware(['auth'])->name('propose_index');
 
 //企画：追加 
 Route::post('/proposes',[ProposeController::class,"store"])->name('propose_store');
@@ -36,6 +39,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/dataViz', 'App\Http\Controllers\DataVizController@csvDataViz');
 
 require __DIR__.'/auth.php';
