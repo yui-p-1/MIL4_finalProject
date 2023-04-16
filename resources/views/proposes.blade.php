@@ -10,9 +10,9 @@
             <form action='prediction' method="GET" class="w-full max-w-lg">
                 <x-button class="bg-gray-100 text-gray-900">{{ __('Prediction') }}</x-button>
             </form>
-            <form href="" method="GET" class="w-full max-w-lg">
-                <x-button class="bg-gray-100 text-gray-900">{{ __('propose') }}</x-button>
-            </form>
+            <!--<form href="" method="GET" class="w-full max-w-lg">-->
+            <!--    <x-button class="bg-gray-100 text-gray-900">{{ __('propose') }}</x-button>-->
+            <!--</form>-->
         </h2>
     </x-slot>
     <!--ヘッダー[END]-->

@@ -1,11 +1,31 @@
 <x-app-layout>
-
+  
 <html>
     <head>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
     </head>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!--ヘッダー[START]-->
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+
+            <form action='employees' method="GET" class="w-full max-w-lg">
+                <x-button class="bg-gray-100 text-gray-900">{{ __('all employees') }}</x-button>
+            </form>
+            <form action='home' method="GET" class="w-full max-w-lg">
+                <x-button class="bg-gray-100 text-gray-900">{{ __('employee dashboard') }}</x-button>
+            </form>
+            <form action='map' method="GET" class="w-full max-w-lg">
+                <x-button class="bg-gray-100 text-gray-900">{{ __('map') }}</x-button>
+            </form>
+            
+        </h2>
+    </x-slot>
+    <!--ヘッダー[END]-->
+
+
 <body>
     <div>
         <div id="empChart_11"></div>

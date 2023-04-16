@@ -7,7 +7,10 @@ use App\Models\Book; //Add
 use App\Http\Controllers\ProposeController; //Add
 use App\Models\Propose; //Add
 
-Route::get('/employee', 'App\Http\Controllers\EmployeeController@csvEmployee');
+Route::get('/home', 'App\Http\Controllers\HomeController@index');
+
+Route::get('/employees', 'App\Http\Controllers\EmployeeController@csvEmployee');
+Route::get('/map', 'App\Http\Controllers\MapController@csvMap');
 
 Route::get('/dataViz', 'App\Http\Controllers\DataVizController@csvDataViz');
 Route::get('/prediction', 'App\Http\Controllers\PredictionController@csvPrediction');
