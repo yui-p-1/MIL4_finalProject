@@ -9,6 +9,7 @@ use App\Models\Propose; //Add
 
 
 Route::get('/dataViz', 'App\Http\Controllers\DataVizController@csvDataViz');
+Route::get('/employee', 'App\Http\Controllers\EmployeeController@csvEmployee');
 Route::get('/prediction', 'App\Http\Controllers\PredictionController@csvPrediction');
 
 

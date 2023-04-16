@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('prediction', function (Blueprint $table) {
+        Schema::create('predict', function (Blueprint $table) {
             $table->text('EmpID')->nullable();
             $table->float('test_X')->nullable();
             $table->float('test_Y')->nullable();
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prediction');
+        Schema::dropIfExists('predict');
     }
 };

@@ -42,13 +42,13 @@ public function csvPrediction(){
           }
       
       
-        DB::table('prediction')->truncate();
+        DB::table('predict')->truncate();
         foreach($file_2 as $test) {
         // $test[0]はtest_Xカラム、$test[1]はtest_Yカラムの値に対応する
         $test_X = $test[0];
         $test_Y = $test[1];
       
-        DB::table('prediction')->insert([
+        DB::table('predict')->insert([
             'test_X' => $test_X,
             'test_Y' => $test_Y,
             ]);

@@ -11,7 +11,7 @@
                 <x-button class="bg-gray-100 text-gray-900">{{ __('Prediction') }}</x-button>
             </form>
             <form action="{{ route('propose_index') }}" method="GET" class="w-full max-w-lg">
-                <x-button class="bg-gray-100 text-gray-900">{{ __('dashboard') }}</x-button>
+                <x-button class="bg-gray-100 text-gray-900">{{ __('propose') }}</x-button>
             </form>
         </h2>
     </x-slot>

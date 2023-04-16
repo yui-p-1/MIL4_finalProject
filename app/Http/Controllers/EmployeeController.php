@@ -129,12 +129,12 @@ public function csvEmployee(){
       'Absences' => $employee[35],
     ];
     
-    DB::table('employees')->insert($data);
+    // DB::table('employees')->insert($data);
 
 }
  
   
-  return view('/employee', [
+  return view('/employees', [
     'title' => 'CSV読み込みのサンプル',
     'employees' => $employees,
   ]);
