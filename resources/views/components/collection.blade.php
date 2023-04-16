@@ -3,7 +3,7 @@
   <div>{{ $slot }}</div>
   
     <div>
-    <form action="{{ url('booksedit/'.$id) }}" method="POST">
+    <form action="{{ url('proposesedit/'.$id) }}" method="POST">
          @csrf
          
         <button type="submit"  class="btn bg-blue-500 rounded-lg">
@@ -14,7 +14,7 @@
   </div>
   
   <div>
-    <form action="{{ url('book/'.$id) }}" method="POST">
+    <form action="{{ url('propose/'.$id) }}" method="POST">
          @csrf
          @method('DELETE')
         
