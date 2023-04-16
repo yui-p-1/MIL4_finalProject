@@ -1,0 +1,6 @@
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 100px 100px; /* 左右に20pxの余白を追加 */
+}
