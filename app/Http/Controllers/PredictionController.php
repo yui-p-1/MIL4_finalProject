@@ -41,18 +41,18 @@ public function csvPrediction(){
           $tests[] = $test;
           }
       
+      //デプロイ時にエラーが出るためいったん切る 
+        // DB::table('predict')->truncate();
+        // foreach($file_2 as $test) {
+        // // $test[0]はtest_Xカラム、$test[1]はtest_Yカラムの値に対応する
+        // $test_X = $test[0];
+        // $test_Y = $test[1];
       
-        DB::table('predict')->truncate();
-        foreach($file_2 as $test) {
-        // $test[0]はtest_Xカラム、$test[1]はtest_Yカラムの値に対応する
-        $test_X = $test[0];
-        $test_Y = $test[1];
-      
-        DB::table('predict')->insert([
-            'test_X' => $test_X,
-            'test_Y' => $test_Y,
-            ]);
-        }
+        // DB::table('predict')->insert([
+        //     'test_X' => $test_X,
+        //     'test_Y' => $test_Y,
+        //     ]);
+        // }
   
         return view('/prediction', [
         'trains' => $trains,
