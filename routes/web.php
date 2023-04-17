@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('menu');
 })->middleware(['auth'])->name('menu');
 
+
+
 //企画：ダッシュボード表示(proposes.blade.php)
 Route::get('/dashboard', [ProposeController::class,'index'])->middleware(['auth'])->name('dashboard');
 Route::get('/proposes', [ProposeController::class,'index'])->middleware(['auth'])->name('propose_index');
